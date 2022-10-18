@@ -1,0 +1,86 @@
+# Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"Fatimah",
+    "email":"fatimah@gmail.com",
+    "password":"password123456",
+    "confirmPassword":"password123456",
+    "role":"user"
+}
+
+###
+# Get All Users
+GET http://localhost:5000/users
+
+###
+# Get Single User
+GET http://localhost:5000/users/0b734ce6-92fb-4eac-b858-db58cc6de158
+
+###
+# Update a user
+PATCH http://localhost:5000/users/f9914957-fbcf-4cba-af80-311b4fd09875
+Content-Type: application/json
+
+{
+    "name":"Fatimah Aznur",
+    "email":"fatimah@gmail.com",
+    "password":"password123456",
+    "confirmPassword":"password123456",
+    "role":"user"
+}
+
+###
+# Delete a user
+DELETE http://localhost:5000/users/f9914957-fbcf-4cba-af80-311b4fd09875
+
+###
+# Login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"fatimah@gmail.com",
+    "password":"password123456"
+}
+
+###
+#me
+GET http://localhost:5000/me
+
+###
+#logout
+DELETE http://localhost:5000/logout
+
+###
+#Get All Products
+GET http://localhost:5000/products
+
+###
+#Get Single Product
+GET http://localhost:5000/products/0fd6fa90-12cd-4ce6-9136-6ca0b67cb4c9
+
+###
+#POST Data Produk
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name":"Gahru",
+    "price":"100000"
+}
+
+###
+#UPDATE Data Produk
+PATCH  http://localhost:5000/products/0fd6fa90-12cd-4ce6-9136-6ca0b67cb4c9
+Content-Type: application/json
+
+{
+    "name":"Minyak Wangi Banget",
+    "price":"100000"
+}
+
+###
+#DELETE Data Produk
+DELETE  http://localhost:5000/products/0fd6fa90-12cd-4ce6-9136-6ca0b67cb4c9
